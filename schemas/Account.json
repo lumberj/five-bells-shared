@@ -47,5 +47,14 @@
     }
   },
   "required": ["name"],
+  "not": [
+    "anyOf": [
+      {"required": ["fingerprint", "password"]}
+    ]
+  ],
+  "anyOf": [
+    {"required": ["fingerprint"]},
+    {"required": ["password"]}
+  ]
   "additionalProperties": false
 }
